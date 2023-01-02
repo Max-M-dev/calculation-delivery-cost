@@ -1,4 +1,6 @@
-[Preview](asset/calcCostDelivery1.gif)
+[Preview old version](asset/calcCostDelivery.gif)
+
+[Preview new version](asset/calc-cost-delivery-v2-antd.png)
 
 # Run
 

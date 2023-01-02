@@ -1,7 +1,9 @@
 function Recording({ title, children }) {
 	return (
 		<div className="size__group">
-			<label className="size__label">{title}</label>
+			<label className="size__label">
+				<Text>{title}</Text>
+			</label>
 			{children}
 		</div>
 	);
@@ -18,7 +20,7 @@ function GroupInputRange(props) {
 }
 
 function InpNumber(props) {
-	return <input type="number" {...props} />;
+	return <Input type="number" {...props} />;
 }
 function InpRange(props) {
 	return <input type="range" {...props} />;
@@ -26,10 +28,13 @@ function InpRange(props) {
 function Total({ total, suffix }) {
 	return (
 		<>
-			Итого:
-			<span className="total">
-				{total} {suffix}
-			</span>
+			<Title level={2}>
+				Итого:
+				<br />
+				<span className="total">
+					{total} {suffix}
+				</span>
+			</Title>
 		</>
 	);
 }
@@ -51,29 +56,38 @@ function ContainerUi(props) {
 			</div>
 			<div className="right">
 				<div className="content">
-					<div className="title-group">Укажите стоимость посылки в грн.:</div>
+					<div className="title-group">
+						<Text mark>Укажите стоимость посылки в грн.:</Text>
+					</div>
 					<Recording title="Стоимость:">
 						<GroupInputRange
 							placeholder="Укажите стоимость в грн."
 							max="1000"
+							suffix="грн."
 							{...inpCostCargoControlled}
 						/>
 					</Recording>
-					<div className="title-group">Укажите вес посылки:</div>
+					<div className="title-group">
+						<Text mark>Укажите вес посылки:</Text>
+					</div>
 					<Recording title="Вес:">
 						<GroupInputRange
 							placeholder="Укажите вес в кг."
 							max="1500"
+							suffix="кг"
 							{...inpWeightControlled}
 						/>
 					</Recording>
-					<div className="title-group">Укажите габариты посылки:</div>
+					<div className="title-group">
+						<Text mark>Укажите габариты посылки:</Text>
+					</div>
 
 					<Recording title="Высота">
 						<GroupInputRange
 							placeholder="Укажите высоту в см"
 							min="1"
 							max="200"
+							suffix="см"
 							{...inpSizeHeigthControlled}
 						/>
 					</Recording>
@@ -83,6 +97,7 @@ function ContainerUi(props) {
 							placeholder="Укажите ширину в см"
 							min="1"
 							max="200"
+							suffix="см"
 							{...inpSizeWeightControlled}
 						/>
 					</Recording>
@@ -91,6 +106,7 @@ function ContainerUi(props) {
 							placeholder="Укажите длину в см"
 							min="1"
 							max="200"
+							suffix="см"
 							{...inpSizeLengthControlled}
 						/>
 					</Recording>

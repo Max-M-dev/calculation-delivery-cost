@@ -1,5 +1,3 @@
-const { useState, useMemo, useEffect, useCallback, useContext } = React;
-
 function Container() {
 	const [sizes, setSizes] = useState([]);
 
@@ -52,7 +50,11 @@ function Container() {
 		inpSizeWeightControlled,
 		inpSizeLengthControlled,
 	};
-	return <ContainerUi {...propsForUi} />;
+	return (
+		<>
+			<ContainerUi {...propsForUi} />
+		</>
+	);
 }
 
 function App() {

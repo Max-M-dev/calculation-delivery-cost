@@ -40,7 +40,13 @@ body {
 	flex-basis: 50%;
 	display: flex;
 	justify-content: center;
-	padding: 15px;
+	width: 100%;
+}
+.left {
+	padding-right: 15px;
+}
+.right {
+	padding-left: 15px;
 }
 .content {
 	display: inline-block;
@@ -64,8 +70,9 @@ body {
 	flex-flow: column nowrap;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	width: 100%;
 }
 
 .size__label {
-	min-width: 70px;
+	min-width: 100px;
 }

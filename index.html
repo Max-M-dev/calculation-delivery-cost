@@ -9,9 +9,22 @@
 			href="https://yarnpkg.com/en/package/normalize.css"
 		/>
 		<link rel="stylesheet" href="./style.css" />
-		<script src="./js/react.development.js"></script>
-		<script src="./js/react-dom.development.js"></script>
-		<script src="./js/babel.js"></script>
+		<link rel="stylesheet" href="./js/vendor/antd-reset.css" />
+		<script src="./js/vendor/react.development.js"></script>
+		<script src="./js/vendor/react-dom.development.js"></script>
+		<script src="./js/vendor/babel.js"></script>
+		<script src="./js/vendor/dayjs.min.js"></script>
+		<script src="./js/vendor/antd.min.js"></script>
+		<script src="./js/vendor/moment-with-locales.js"></script>
+		<script src=".js/vendord/antd-with-locales.js"></script>
+		<script defer>
+			const { useState, useMemo, useEffect, useCallback, useContext } = React;
+			const {
+				Input,
+				Tooltip,
+				Typography: { Text, Title },
+			} = antd;
+		</script>
 		<script defer type="text/babel" src="./js/hook/hooks.jsx"></script>
 		<script defer type="text/babel" src="./js/component/ui.jsx"></script>
 		<script defer type="text/babel" src="./js/index.jsx"></script>

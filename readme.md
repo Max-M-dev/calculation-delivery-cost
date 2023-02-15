@@ -1,6 +1,6 @@
-[Preview old version](asset/calcCostDelivery1.gif)
+#Demo
 
-[Preview new version](asset/calc-cost-delivery-v2-antd.png)
+[Link](https://max-m-dev.github.io/calculation-delivery-cost/)
 
 # Run
 
